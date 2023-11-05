@@ -1,3 +1,8 @@
+[![Build Status](https://github.com/ericuni/mockeys/actions/workflows/go.yml/badge.svg)](https://github.com/ericuni/mockeys/actions/workflows/go.yml)
+[![Coverage Status](https://coveralls.io/repos/github/ericuni/mockeys/badge.svg?branch=master)](https://coveralls.io/github/ericuni/mockeys?branch=master)
+[![GoReport](https://goreportcard.com/badge/github.com/securego/gosec)](https://goreportcard.com/report/github.com/ericuni/mockeys)
+[![Go Reference](https://pkg.go.dev/badge/github.com/ericuni/mockeys.svg)](https://pkg.go.dev/github.com/ericuni/mockeys)
+
 # mockeys
 当使用 [mockey](https://github.com/bytedance/mockey) 但是又想直接使用testing.T 来分组, 而不是使用 PatchConvey 时, 需要使用下面的方式.
 ```go
