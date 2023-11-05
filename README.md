@@ -1,6 +1,8 @@
 # mockeys
 当使用 [mockey](https://github.com/bytedance/mockey) 但是又想直接使用testing.T 来分组, 而不是使用 PatchConvey 时, 需要使用下面的方式.
 ```go
+import "github.com/bytedance/mockey"
+
 func Foo(x int) int {
 	return x + 1
 }
@@ -22,6 +24,11 @@ func TestMockey(t *testing.T) {
 
 mockeys 就是为了解决上面的几个问题
 ```go
+import (
+  "github.com/bytedance/mockey"
+  "github.com/ericuni/mockeys"
+)
+
 func TestMockeys(t *testing.T) {
   patches := mockeys.NewPatches()
   defer patches.Reset()
@@ -60,6 +67,11 @@ func TestMockeys(t *testing.T) {
 
 多个单测公用的 mock
 ```go
+import (
+  "github.com/bytedance/mockey"
+  "github.com/ericuni/mockeys"
+)
+
 type Repos struct {
   mysqlRepo *mock_dbops.Repo
   redisRepo *mock_redisops.Repo
