@@ -9,7 +9,7 @@
 import "github.com/bytedance/mockey"
 
 func Foo(x int) int {
-	return x + 1
+  return x + 1
 }
 
 func TestMockey(t *testing.T) {
